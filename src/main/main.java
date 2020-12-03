@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class main {
 	
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost:3306/DataBaseClass";
-	static final String USER = "dbclass";
-	static final String PASS = "123456";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/DataBaseClass";//Please change here
+	static final String USER = "dbclass";//Please change here
+	static final String PASS = "123456";//Please change here
 	private static int session = -1;
 	private static String session_name;
 	
@@ -265,7 +265,7 @@ public class main {
 		}else if(command.equals("2")) {
 			sql = "select * from items where category like '%" + word + "%'";
 		}else if(command.equals("3")) {
-			sql = "select * from items where description like '%" + word + "%1'";
+			sql = "select * from items where description like '%" + word + "%'";
 		}else if(command.equals("4")) {
 			sql = "select user.username,items.* from items join user on items.sellerid = user.id where user.username like '%" + word + "%'";
 		}else if(command.equals("5")) {
