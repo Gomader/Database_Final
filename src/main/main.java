@@ -177,7 +177,7 @@ public class main {
 			stmt.close();
 			conn.close();
 			
-			System.out.println("Succeed! Your "+name + "is for sale!");
+			System.out.println("Succeed! Your "+name + " is for sale!");
 			
 		}catch(SQLException se) {
 			se.printStackTrace();
@@ -357,7 +357,6 @@ public class main {
 			conn = DriverManager.getConnection(DB_URL,USER,PASS);
 			stmt = conn.createStatement();
 			sql = "insert into bidinformation(itemid,bider,price) values("+choice+","+session+","+bid+");";
-			System.out.println(sql);
 			stmt.execute(sql);
 			
 			System.out.println("\nSuccessful bidding!\n");

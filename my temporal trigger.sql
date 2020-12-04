@@ -25,3 +25,12 @@ begin
 end
 |
 |
+
+delimiter |
+drop trigger if exists increase |
+create trigger deal after insert on DataBaseClass.bidinformation for each row
+begin
+	update DataBaseClass.items bidprice = (select price from bidinformation order by price desc limit 1 where itemid = items.id);
+end
+|
+|
